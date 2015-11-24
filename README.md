@@ -27,11 +27,15 @@ With the command-line:
               [--outputencoding OUTPUTENCODING] [--xmldeclaration]
               [source]
 
+Notably, `-m xml` outputs XML (default) and `-m html` outputs HTML.
+
 With the python module
 
     >>> from html5tidy import tidy
     >>> tidy('some text')
     '<html><head/><body>some text</body></html>'
+    >>> tidy('some text', method='html')
+    '<html><head></head><body>some text</body></html>'
 
 
 Copyright
